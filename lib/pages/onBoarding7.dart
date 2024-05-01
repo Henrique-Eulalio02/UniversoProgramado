@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projeto/pages/home.dart';
 
 class OnBoarding7 extends StatefulWidget {
   const OnBoarding7({Key? key}) : super(key: key);
@@ -40,7 +41,7 @@ class _OnBoarding7State extends State<OnBoarding7> {
                         Text(
                           'Programado',
                           style: TextStyle(
-                            color: Colors.purple,
+                            color: Color.fromRGBO(101, 31, 255, 1),
                             fontSize: 25.0,
                           ),
                         ),
@@ -86,7 +87,13 @@ class _OnBoarding7State extends State<OnBoarding7> {
                               height: 70.0,
                               width: 350,
                               child: ElevatedButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Home()),
+                                  );
+                                },
                                 style: ElevatedButton.styleFrom(
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(6.0),

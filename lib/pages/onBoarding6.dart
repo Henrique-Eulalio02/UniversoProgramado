@@ -42,7 +42,7 @@ class _OnBoarding6State extends State<OnBoarding6> {
                         Text(
                           'Programado',
                           style: TextStyle(
-                            color: Colors.purple,
+                            color: Color.fromRGBO(101, 31, 255, 1),
                             fontSize: 25.0,
                           ),
                         ),
