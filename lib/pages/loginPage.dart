@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:projeto/pages/createAccountPage.dart';
+import 'package:projeto/pages/onBoarding1.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -8,6 +10,12 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  TextEditingController _emailController = TextEditingController();
+  TextEditingController _passwordController = TextEditingController();
+
+  String _mockedEmail = 'teste@teste.com';
+  String _mockedPassword = '123456';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +49,7 @@ class _LoginPageState extends State<LoginPage> {
                       Text(
                         'Programado',
                         style: TextStyle(
-                          color: Color.fromRGBO(101, 31, 255, 1),
+                          color: Colors.purple,
                           fontSize: 25.0,
                         ),
                       ),
@@ -63,6 +71,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               SizedBox(height: 30),
               TextFormField(
+                controller: _emailController,
                 autofocus: true,
                 keyboardType: TextInputType.emailAddress,
                 style: TextStyle(color: Colors.white, fontSize: 20),
@@ -81,7 +90,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               SizedBox(height: 16),
               TextFormField(
-                autofocus: true,
+                controller: _passwordController,
                 obscureText: true,
                 keyboardType: TextInputType.text,
                 style: TextStyle(color: Colors.white, fontSize: 20),
@@ -118,7 +127,7 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(
                 height: 70.0,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: _login,
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8.0),
@@ -206,11 +215,17 @@ class _LoginPageState extends State<LoginPage> {
                   MouseRegion(
                     cursor: SystemMouseCursors.click,
                     child: GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => CreateAccountPage()),
+                        );
+                      },
                       child: Text(
                         'Crie uma conta',
                         style: TextStyle(
-                          color: Color.fromRGBO(101, 31, 255, 1),
+                          color: Colors.purple,
                           fontSize: 16.0,
                         ),
                       ),
@@ -223,5 +238,19 @@ class _LoginPageState extends State<LoginPage> {
         ),
       ),
     );
+  }
+
+  void _login() {
+    String enteredEmail = _emailController.text.trim();
+    String enteredPassword = _passwordController.text.trim();
+
+    if (enteredEmail == _mockedEmail && enteredPassword == _mockedPassword) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => OnBoarding1()),
+      );
+    } else {
+      print('Usuário ou senha incorretos');
+    }
   }
 }

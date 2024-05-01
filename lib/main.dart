@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projeto/pages/createAccountPage.dart';
 import 'package:projeto/pages/home.dart';
 import 'package:projeto/pages/loginPage.dart';
 import 'package:projeto/pages/onBoarding1.dart';
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Trabalho',
       theme: ThemeData(primarySwatch: Colors.red),
-      home: Home(),
+      home: LoginPage(),
     );
   }
 }
