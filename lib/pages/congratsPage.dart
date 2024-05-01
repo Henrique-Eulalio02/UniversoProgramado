@@ -19,38 +19,20 @@ class _CongratsPageState extends State<CongratsPage> {
             padding: EdgeInsets.all(20),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.stretch,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Container(
                   alignment: Alignment.center,
-                  child: Text.rich(
-                    TextSpan(
-                      children: [
-                        TextSpan(
-                          text: 'Parabéns, astronauta! ',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: MediaQuery.of(context).size.width * 0.05,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        TextSpan(
-                          text: 'Você\n',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: MediaQuery.of(context).size.width * 0.05,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        TextSpan(
-                          text: 'passou na lição',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: MediaQuery.of(context).size.width * 0.05,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 20.0),
+                    child: Text(
+                      'Parabéns, astronauta! Você passou na lição',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: MediaQuery.of(context).size.width * 0.05,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
                   ),
                 ),
@@ -88,35 +70,14 @@ class _CongratsPageState extends State<CongratsPage> {
                 SizedBox(height: MediaQuery.of(context).size.height * 0.04),
                 Container(
                   alignment: Alignment.center,
-                  child: Text.rich(
-                    TextSpan(
-                      children: [
-                        TextSpan(
-                          text: 'Suas missões ainda não  ',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: MediaQuery.of(context).size.width * 0.05,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        TextSpan(
-                          text: 'acabaram! Continue\n',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: MediaQuery.of(context).size.width * 0.05,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        TextSpan(
-                          text: 'empenhado',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: MediaQuery.of(context).size.width * 0.05,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
+                  child: Text(
+                    'Suas missões ainda não acabaram, continue empenhado!',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: MediaQuery.of(context).size.width * 0.05,
+                      fontWeight: FontWeight.bold,
                     ),
+                    textAlign: TextAlign.center,
                   ),
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.04),
@@ -134,7 +95,7 @@ class _CongratsPageState extends State<CongratsPage> {
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                       padding: EdgeInsets.symmetric(horizontal: 20.0),
-                      backgroundColor: Colors.deepPurple,
+                      backgroundColor: Color.fromRGBO(101, 31, 255, 1),
                     ),
                     child: Text(
                       "Voltar para as missões",

@@ -36,19 +36,22 @@ class _GamePageState extends State<GamePage> {
                     children: <Widget>[
                       IconButton(
                         icon: Icon(Icons.close),
-                        color: Colors.white,
+                        color: Color.fromRGBO(51, 50, 50, 1),
                         onPressed: () {},
                       ),
                       Row(
                         children: <Widget>[
-                          Icon(
-                            Icons.favorite,
-                            color: Colors.white,
+                          Padding(
+                            padding: const EdgeInsets.only(right: 8.0),
+                            child: Icon(
+                              Icons.favorite,
+                              color: Color.fromRGBO(201, 39, 39, 1),
+                            ),
                           ),
                           Text(
                             '5',
                             style: TextStyle(
-                              color: Colors.white,
+                              color: Color.fromRGBO(201, 39, 39, 1),
                               fontSize: 18.0,
                               fontWeight: FontWeight.bold,
                             ),
@@ -131,7 +134,7 @@ class _GamePageState extends State<GamePage> {
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     padding: EdgeInsets.symmetric(horizontal: 20.0),
-                    backgroundColor: Colors.deepPurple,
+                    backgroundColor: Color.fromRGBO(101, 31, 255, 1),
                   ),
                   child: Text(
                     "Checar",
@@ -160,22 +163,22 @@ class _GamePageState extends State<GamePage> {
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(8.0),
-              side: BorderSide(color: Colors.grey),
+              side: BorderSide(color: Color.fromRGBO(88, 88, 88, 1)),
             ),
           ),
           backgroundColor: MaterialStateProperty.resolveWith<Color>(
             (Set<MaterialState> states) {
               if (option == _selectedOption) {
-                return Colors.deepPurple;
+                return Color.fromRGBO(101, 31, 255, 1);
               }
-              return Colors.transparent;
+              return Color.fromRGBO(30, 30, 30, 1);
             },
           ),
         ),
         child: Text(
           option,
           style: TextStyle(
-            color: option == _selectedOption ? Colors.white : Colors.white70,
+            color: option == _selectedOption ? Colors.white : Color.fromRGBO(88, 88, 88, 1),
             fontSize: 18.0,
           ),
         ),

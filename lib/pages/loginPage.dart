@@ -49,7 +49,7 @@ class _LoginPageState extends State<LoginPage> {
                       Text(
                         'Programado',
                         style: TextStyle(
-                          color: Colors.purple,
+                          color: Color.fromRGBO(101, 31, 255, 1),
                           fontSize: 25.0,
                         ),
                       ),
@@ -60,53 +60,60 @@ class _LoginPageState extends State<LoginPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  Text(
-                    'Olá, bem vindo de volta!',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20.0,
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 30.0),
+                    child: Text(
+                      'Olá, bem vindo de volta!',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20.0,
+                      ),
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 20),
               TextFormField(
-                controller: _emailController,
-                autofocus: true,
-                keyboardType: TextInputType.emailAddress,
-                style: TextStyle(color: Colors.white, fontSize: 20),
-                decoration: InputDecoration(
-                  labelText: "Email",
-                  labelStyle: TextStyle(color: Colors.white, fontSize: 20),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.blue),
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                ),
-              ),
-              SizedBox(height: 16),
-              TextFormField(
-                controller: _passwordController,
-                obscureText: true,
-                keyboardType: TextInputType.text,
-                style: TextStyle(color: Colors.white, fontSize: 20),
-                decoration: InputDecoration(
-                  labelText: "Senha",
-                  labelStyle: TextStyle(color: Colors.white, fontSize: 20),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.blue),
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                ),
-              ),
+  controller: _emailController,
+  autofocus: true,
+  keyboardType: TextInputType.emailAddress,
+  style: TextStyle(color: Color.fromRGBO(121, 121, 121, 1), fontSize: 16),
+  decoration: InputDecoration(
+    labelText: "Email",
+    labelStyle: TextStyle(color: Color.fromRGBO(121, 121, 121, 1), fontSize: 16),
+    fillColor: Color(0xFF333232),
+    filled: true,
+    enabledBorder: OutlineInputBorder(
+      borderSide: BorderSide(color: Colors.transparent),
+      borderRadius: BorderRadius.circular(8),
+    ),
+    focusedBorder: OutlineInputBorder(
+      borderSide: BorderSide(color: Color.fromRGBO(101, 31, 255, 1)),
+      borderRadius: BorderRadius.circular(8),
+    ),
+  ),
+),
+SizedBox(height: 20),
+TextFormField(
+  controller: _passwordController,
+  obscureText: true,
+  keyboardType: TextInputType.text,
+  style: TextStyle(color: Color.fromRGBO(121, 121, 121, 1), fontSize: 16),
+  decoration: InputDecoration(
+    labelText: "Senha",
+    labelStyle: TextStyle(color: Color.fromRGBO(121, 121, 121, 1), fontSize: 16),
+    fillColor: Color(0xFF333232),
+    filled: true,
+    enabledBorder: OutlineInputBorder(
+      borderSide: BorderSide(color: Colors.transparent),
+      borderRadius: BorderRadius.circular(8),
+    ),
+    focusedBorder: OutlineInputBorder(
+      borderSide: BorderSide(color: Color.fromRGBO(101, 31, 255, 1)),
+      borderRadius: BorderRadius.circular(8),
+    ),
+  ),
+),
               SizedBox(height: 16),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -133,7 +140,7 @@ class _LoginPageState extends State<LoginPage> {
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     padding: EdgeInsets.symmetric(horizontal: 20.0),
-                    backgroundColor: Colors.deepPurple,
+                    backgroundColor: Color.fromRGBO(101, 31, 255, 1),
                   ),
                   child: Text(
                     "Entrar",
@@ -180,19 +187,20 @@ class _LoginPageState extends State<LoginPage> {
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                       padding: EdgeInsets.symmetric(horizontal: 20.0),
-                      backgroundColor: Color(0xF333232)),
+                      backgroundColor: Color(0xFF333232),),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(
-                        Icons.golf_course,
-                        color: Colors.white,
+                        Icons.g_mobiledata,
+                        color: Color.fromRGBO(121, 121, 121, 1),
+                        size: 40,
                       ),
                       SizedBox(width: 8.0),
                       Text(
                         "Google",
                         style: TextStyle(
-                          color: Colors.white,
+                          color: Color.fromRGBO(121, 121, 121, 1),
                           fontSize: 18.0,
                         ),
                       ),
@@ -225,7 +233,7 @@ class _LoginPageState extends State<LoginPage> {
                       child: Text(
                         'Crie uma conta',
                         style: TextStyle(
-                          color: Colors.purple,
+                          color: Color.fromRGBO(101, 31, 255, 1),
                           fontSize: 16.0,
                         ),
                       ),
