@@ -13,7 +13,7 @@ class _LoginPageState extends State<LoginPage> {
   TextEditingController _emailController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
 
-  String _mockedEmail = 'teste@teste.com';
+  String _mockedEmail = 'teste@teste';
   String _mockedPassword = '123456';
 
   @override
